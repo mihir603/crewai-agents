@@ -1,8 +1,9 @@
+# import agentops
 from crewai import Agent, Crew, Process, Task
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path="./OAI_CONFIG_LIST")
-
+# agentops.init()
 # creating a simple tech researcher
 tech_researcher = Agent(
   role = "Senior Tech Researcher",
@@ -76,5 +77,5 @@ crew = Crew(
   share_crew=False
 )
 
-result = crew.kickoff(inputs={"topic" : "Claude Opus 4.5 in Software Engineering"})
+result = crew.kickoff(inputs={"topic" : "Writing software apps with Zig language and Why is it becoming hot topic now ?"})
 print(result)
